@@ -1,13 +1,14 @@
 name: 'Hello World'
 description: 'Greet someone'
 inputs:
-  who-to-greet:
+  who-to-greet:  # id of input
     description: 'Who to greet'
     required: true
     default: 'World'
 outputs:
-  random-number: "Random number"
-  value: ${{ steps.random-number-generator.outputs.random-number }}
+  random-number:
+    description: "Random number"
+    value: ${{ steps.random-number-generator.outputs.random-number }}
 runs:
   using: "composite"
   steps:
